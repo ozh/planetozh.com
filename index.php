@@ -42,6 +42,13 @@ $blog     = get_section('blog', 'fetch_blog');
         </div>
         <p class="hero-desc">Open-source ; metal head ; maker of <a href="https://yourls.org" sztyle="color:var(--accent)">YOURLS</a>.</p>
         <div class="hero-links">
+            <a class="link-pill" href="https://planetozh.com/blog/">
+                <svg viewBox="0 0 24 24" width="13" height="13" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="12" fill="currentColor"/>
+                    <text x="12" y="16" text-anchor="middle" font-family="monospace" font-size="13" font-weight="bold" fill="var(--bg)" letter-spacing="-1">OZH</text>
+                </svg>
+                blog
+            </a>
             <a class="link-pill" href="https://github.com/ozh">
                 <svg viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.73.083-.73 1.205.085 1.84 1.238 1.84 1.238 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.604-2.665-.305-5.467-1.334-5.467-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.604-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12"/></svg>
                 @ozh
@@ -98,10 +105,10 @@ $blog     = get_section('blog', 'fetch_blog');
         <div class="card">
             <div class="card-header">
                 <span class="card-dot" style="background:#4a9a4a"></span>
-                <span class="card-label">Blog</span>
+                <span class="card-label"><a href="https://planetozh.com/blog/">Blog</a></span>
                 <?= stale_notice($blog, 'Blog') ?>
                 <?php if (!$blog['error'] && !$blog['stale']): ?>
-                    <span class="card-count">planetozh.com/blog</span>
+                    <span class="card-count"><a href="https://planetozh.com/blog/">planetozh.com/blog</a></span>
                 <?php endif; ?>
             </div>
             <div class="card-body">
@@ -127,10 +134,10 @@ $blog     = get_section('blog', 'fetch_blog');
         <div class="card">
             <div class="card-header">
                 <span class="card-dot" style="background:#7c6af5"></span>
-                <span class="card-label">Mastodon</span>
+                <span class="card-label"><a href="https://fosstodon.org/@ozh">Mastodon</a></span>
                 <?= stale_notice($mastodon, 'Mastodon') ?>
                 <?php if (!$mastodon['error'] && !$mastodon['stale']): ?>
-                    <span class="card-count">@ozh@fosstodon.org</span>
+                    <span class="card-count"><a href="https://fosstodon.org/@ozh">@ozh@fosstodon.org</a></span>
                 <?php endif; ?>
             </div>
             <div class="card-body">
@@ -152,10 +159,10 @@ $blog     = get_section('blog', 'fetch_blog');
         <div class="card">
             <div class="card-header">
                 <span class="card-dot" style="background:#888"></span>
-                <span class="card-label">GitHub</span>
+                <span class="card-label"><a href="https://github.com/ozh">GitHub</a></span>
                 <?= stale_notice($github, 'GitHub') ?>
                 <?php if (!$github['error'] && !$github['stale']): ?>
-                    <span class="card-count">github.com/ozh</span>
+                    <span class="card-count"><a href="https://github.com/ozh">github.com/ozh</a></span>
                 <?php endif; ?>
             </div>
             <div class="card-body">
@@ -184,10 +191,10 @@ $blog     = get_section('blog', 'fetch_blog');
         <div class="card">
             <div class="card-header">
                 <span class="card-dot" style="background:#1db954"></span>
-                <span class="card-label">Recently played</span>
+                <span class="card-label"><a href="https://open.spotify.com/user/ozhy">Recently played</a></span>
                 <?= stale_notice($spotify, 'Spotify') ?>
                 <?php if (!$spotify['error'] && !$spotify['stale']): ?>
-                    <span class="card-count">spotify</span>
+                    <span class="card-count"><a href="https://open.spotify.com/user/ozhy">spotify</a></span>
                 <?php endif; ?>
             </div>
             <div class="card-body">

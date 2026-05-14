@@ -198,7 +198,7 @@ function fetch_github(): array {
                 break;
             case 'PullRequestEvent':
                 $pr    = $ev['payload']['pull_request'] ?? [];
-                $desc  = ($ev['payload']['action'] ?? '') . ': ' . ($pr['title'] ?? '');
+                $desc  = ($ev['payload']['action'] ?? '') . ': ' . ($pr['number'] ?? '');
                 $badge = 'pr';
                 break;
             case 'IssuesEvent':

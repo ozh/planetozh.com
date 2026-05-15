@@ -92,7 +92,7 @@ function cache_expires_in(string $key): string {
     if ($remaining < 60) {
         return 'in ' . $remaining . 's';
     }
-    return 'in ' . (int)($remaining / 60) . 'min';
+    return (int)($remaining / 60) . 'min';
 }
 
 /**
@@ -158,7 +158,7 @@ function http_post(string $url, string $body, array $headers = []): array {
  * @return array List of event items, or an array with an 'error' key on failure
  */
 function fetch_github(): array {
-    $url  = 'https://api.github.com/users/' . GITHUB_USER . '/events/public?per_page=30';
+    $url  = 'https://api.github.com/users/' . GITHUB_USER . '/events/public?per_page=60';
     $hdrs = [
         'User-Agent: ' . GITHUB_USER . '-homepage',
         'Accept: application/vnd.github+json',
